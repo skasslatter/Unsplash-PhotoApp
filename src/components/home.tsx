@@ -1,9 +1,10 @@
 import React from "react";
+import PhotosComponent from "./photos";
 
 export const HomeComponent = () => {
   return (
-		<>
-			<h1>test</h1>
+    <>
+      <PhotosComponent/>
     </>
   );
 };
