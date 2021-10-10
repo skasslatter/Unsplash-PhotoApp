@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { createApi } from "unsplash-js";
 import "./photo-list.css";
 
@@ -39,23 +40,27 @@ class PhotoListComponent extends React.Component<Props, State> {
         <div className="card-list">
           {this.state.photos.map((photo) => (
             <>
-              <div className="card" key={photo.id}>
-                <img
-                  className="card--image"
-                  src={photo.urls.regular}
-                  width="100%"
-                  height="100%"
-                  alt={photo.alt_description || "Foto"}
-                ></img>
-                <div className="card--footer">
+              <Link to={`/photos/${photo.id}`}>
+                <div className="card" key={photo.id}>
                   <img
-                    src={photo.user.profile_image.small}
-                    alt="Profile"
-                    className="media--obj"
-                  />
-                  <p className="media--body">{photo.user.name}</p>
+                    className="card--image"
+                    src={photo.urls.regular}
+                    width="100%"
+                    height="100%"
+                    alt={photo.alt_description || "Foto"}
+                  ></img>
+                  <div className="card--footer">
+                    <img
+                      src={photo.user.profile_image.small}
+                      alt="Profile"
+                      className="media--obj"
+                    />
+                    <p className="media--body">
+                        {photo.user.name}
+                    </p>
+                  </div>
                 </div>
-              </div>
+              </Link>
             </>
           ))}
         </div>
