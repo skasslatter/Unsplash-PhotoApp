@@ -23,11 +23,8 @@ class PhotoListComponent extends React.Component<Props, State> {
 
     unsplash.photos.getRandom({ count: 20 }).then((response) => {
       const data: any = response.response;
-      const photosData = data?.map((obj: any) => {
-        return { id: obj.id, alt: obj.alt_description, url: obj.urls.regular };
-      });
       this.setState({
-        photos: photosData,
+        photos: data,
       });
     });
   }
@@ -41,15 +38,25 @@ class PhotoListComponent extends React.Component<Props, State> {
       <>
         <div className="card-list">
           {this.state.photos.map((photo) => (
-            <div className="card" key={photo.id}>
-              <img
-                className="card--image"
-                src={photo.url}
-                width="100%"
-                height="100%"
-                alt={photo.alt || "Foto"}
-              ></img>
-            </div>
+            <>
+              <div className="card" key={photo.id}>
+                <img
+                  className="card--image"
+                  src={photo.urls.regular}
+                  width="100%"
+                  height="100%"
+                  alt={photo.alt_description || "Foto"}
+                ></img>
+                <div className="card--footer">
+                  <img
+                    src={photo.user.profile_image.small}
+                    alt="Profile"
+                    className="media--obj"
+                  />
+                  <p className="media--body">{photo.user.name}</p>
+                </div>
+              </div>
+            </>
           ))}
         </div>
       </>
