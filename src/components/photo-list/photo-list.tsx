@@ -39,29 +39,25 @@ class PhotoListComponent extends React.Component<Props, State> {
       <>
         <div className="card-list">
           {this.state.photos.map((photo) => (
-            <>
-              <Link to={`/photos/${photo.id}`}>
-                <div className="card" key={photo.id}>
+            <Link to={`/photos/${photo.id}`} key={photo.id}>
+              <div className="card">
+                <img
+                  className="card--image"
+                  src={photo.urls.regular}
+                  width="100%"
+                  height="100%"
+                  alt={photo.alt_description || "Foto"}
+                ></img>
+                <div className="card--footer">
                   <img
-                    className="card--image"
-                    src={photo.urls.regular}
-                    width="100%"
-                    height="100%"
-                    alt={photo.alt_description || "Foto"}
-                  ></img>
-                  <div className="card--footer">
-                    <img
-                      src={photo.user.profile_image.small}
-                      alt="Profile"
-                      className="media--obj"
-                    />
-                    <p className="media--body">
-                        {photo.user.name}
-                    </p>
-                  </div>
+                    src={photo.user.profile_image.small}
+                    alt="Profile"
+                    className="media--obj"
+                  />
+                  <p className="media--body">{photo.user.name}</p>
                 </div>
-              </Link>
-            </>
+              </div>
+            </Link>
           ))}
         </div>
       </>
