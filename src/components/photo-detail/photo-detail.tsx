@@ -1,9 +1,11 @@
 import React from "react";
-import { RouteComponentProps, useParams, withRouter } from "react-router-dom";
+import { RouteComponentProps, withRouter } from "react-router-dom";
 import { createApi } from "unsplash-js";
+import "./photo-detail.css";
 
 interface State {
-  photo: any[];
+  photo: any;
+  isLoading: boolean;
 }
 interface RouteParams {
   id: string;
@@ -17,7 +19,8 @@ class PhotoDetailComponent extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = {
-      photo: [],
+      photo: {},
+      isLoading: true,
     };
   }
 
@@ -28,10 +31,10 @@ class PhotoDetailComponent extends React.Component<Props, State> {
     });
 
     unsplash.photos.get({ photoId: id }).then((response) => {
-      const data: any = response.response;
-      console.log("data", data);
+      const data = response.response;
       this.setState({
         photo: data,
+        isLoading: false,
       });
     });
   }
@@ -43,7 +46,34 @@ class PhotoDetailComponent extends React.Component<Props, State> {
   render() {
     return (
       <>
-        <h1>Hello, you are seeing a photo detail</h1>
+        {this.state.isLoading ? (
+          <h1> Loading </h1>
+        ) : (
+          <>
+            <div className="img--wrapper">
+              <img
+                src={this.state.photo.urls.regular}
+                width="100%"
+                height="100%"
+                alt={this.state.photo.alt_description || "Foto"}
+              ></img>
+            </div>
+            <div className="infos">
+              <div className="author">
+                <img
+                  src={this.state.photo.user.profile_image.small}
+                  alt="Profile"
+                  className="author--img"
+                />
+                <p className="author--name">{this.state.photo.user.name}</p>
+              </div>
+              <p>Description {this.state.photo.description}</p>
+              <p>Views {this.state.photo.views}</p>
+              <p>Downloads {this.state.photo.downloads}</p>
+              <p>Likes {this.state.photo.likes}</p>
+            </div>
+          </>
+        )}
       </>
     );
   }
