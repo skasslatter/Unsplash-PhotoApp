@@ -1,7 +1,3 @@
-# Interview Challenge: React Junior Developer
-
-This is a coding challenge for prospective front-end developer applicants applying to NADUVI. If you're unfamiliar with React, Facebook has put together a helpful tutorial that provides a quick introduction to the basics: https://reactjs.org/docs/hello-world.html
-
 ## Goal:
 
 #### Build a simple React app that allows viewing and interacting with a grid of curated photos from Unsplash
