@@ -47,11 +47,11 @@ class PhotoDetailComponent extends React.Component<Props, State> {
   render() {
     return (
       <>
+        <BackButtonComponent />
         {this.state.isLoading ? (
           <h1> Loading </h1>
         ) : (
           <>
-            <BackButtonComponent />
             <div className="wrapper">
               <div className="img--wrapper">
                 <img
@@ -72,7 +72,7 @@ class PhotoDetailComponent extends React.Component<Props, State> {
                 </div>
                 {this.state.photo.description && (
                   <div className="description">
-                   {this.state.photo.description}
+                    {this.state.photo.description}
                   </div>
                 )}
                 <h5>Views</h5>
