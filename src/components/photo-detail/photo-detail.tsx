@@ -1,6 +1,7 @@
 import React from "react";
 import { RouteComponentProps, withRouter } from "react-router-dom";
 import { createApi } from "unsplash-js";
+import { BackButtonComponent } from "../back-button/back-button";
 import "./photo-detail.css";
 
 interface State {
@@ -50,27 +51,35 @@ class PhotoDetailComponent extends React.Component<Props, State> {
           <h1> Loading </h1>
         ) : (
           <>
-            <div className="img--wrapper">
-              <img
-                src={this.state.photo.urls.regular}
-                width="100%"
-                height="100%"
-                alt={this.state.photo.alt_description || "Foto"}
-              ></img>
-            </div>
-            <div className="infos">
-              <div className="author">
+            <BackButtonComponent />
+            <div className="wrapper">
+              <div className="img--wrapper">
                 <img
-                  src={this.state.photo.user.profile_image.small}
-                  alt="Profile"
-                  className="author--img"
-                />
-                <p className="author--name">{this.state.photo.user.name}</p>
+                  src={this.state.photo.urls.regular}
+                  width="100%"
+                  height="100%"
+                  alt={this.state.photo.alt_description || "Foto"}
+                ></img>
               </div>
-              <p>Description {this.state.photo.description}</p>
-              <p>Views {this.state.photo.views}</p>
-              <p>Downloads {this.state.photo.downloads}</p>
-              <p>Likes {this.state.photo.likes}</p>
+              <div className="infos">
+                <div className="author">
+                  <img
+                    src={this.state.photo.user.profile_image.small}
+                    alt="Profile"
+                    className="author--img"
+                  />
+                  <p className="author--name">{this.state.photo.user.name}</p>
+                </div>
+                {this.state.photo.description && (
+                  <p>Description {this.state.photo.description}</p>
+                )}
+                <h5>Views</h5>
+                <div>{this.state.photo.views}</div>
+                <h5>Downloads</h5>
+                <div>{this.state.photo.downloads}</div>
+                <h5>Likes</h5>
+                <div>{this.state.photo.likes}</div>
+              </div>
             </div>
           </>
         )}

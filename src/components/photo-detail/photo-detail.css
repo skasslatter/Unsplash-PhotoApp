@@ -1,0 +1,45 @@
+.wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 2rem;
+}
+
+.img--wrapper>img {
+  object-fit: contain;
+  width: 30rem;
+  height: 40rem;
+}
+
+.infos {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  padding: 2rem;
+}
+
+.infos--description {
+  font-family: Courier serif;
+  font-size: 15px;
+  color: #999;
+  margin-left: 10px;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+}
+
+.author--img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #d8d8d8;
+}
+
+.author--name {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  border-radius: 10px;
+  justify-content: center;
+}
