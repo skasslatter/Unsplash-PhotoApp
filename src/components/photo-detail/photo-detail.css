@@ -1,5 +1,6 @@
 .wrapper {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
   margin: 2rem;
 }
@@ -27,6 +28,7 @@
 .author {
   display: flex;
   align-items: center;
+  align-self: center;
 }
 
 .author--img {
@@ -42,4 +44,8 @@
   padding: 10px 15px;
   border-radius: 10px;
   justify-content: center;
+}
+
+.description {
+  max-width: 30vw;
 }
