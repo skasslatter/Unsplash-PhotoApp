@@ -2,8 +2,8 @@ import React from "react";
 import { RouteComponentProps, withRouter } from "react-router-dom";
 import { createApi } from "unsplash-js";
 import { BackButtonComponent } from "../back-button/back-button";
+import { LoadingSpinnerComponent } from "../loading-spinner/loading-spinner";
 import "./photo-detail.css";
-
 interface State {
   photo: any;
   isLoading: boolean;
@@ -49,7 +49,9 @@ class PhotoDetailComponent extends React.Component<Props, State> {
       <>
         <BackButtonComponent />
         {this.state.isLoading ? (
-          <h1> Loading </h1>
+          <>
+           <LoadingSpinnerComponent/>
+          </>
         ) : (
           <>
             <div className="wrapper">
