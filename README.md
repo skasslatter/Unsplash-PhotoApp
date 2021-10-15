@@ -1,6 +1,20 @@
-# Interview Challenge: React Junior Developer
+# Unsplash Photo App
 
-This is a coding challenge for prospective front-end developer applicants applying to NADUVI. If you're unfamiliar with React, Facebook has put together a helpful tutorial that provides a quick introduction to the basics: https://reactjs.org/docs/hello-world.html
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Before running the application, install the dependencies by running the following command: 
+#### `npm install`
+
+Create a .env file and add your API key for the Unsplash api: 
+#### `REACT_APP_API_ACCESS_KEY = yourKey`
+
+## Available Scripts
+
+In the project directory, you can run:
+
+#### `npm start`
+
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser. The page will reload if you make edits.
+
 
 ## Goal:
 
