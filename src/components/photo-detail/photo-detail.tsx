@@ -73,7 +73,7 @@ class PhotoDetailComponent extends React.Component<Props, State> {
                   <p className="author--name">{this.state.photo.user.name}</p>
                 </div>
                 {this.state.photo.description && (
-                  <div className="description">
+                  <div>
                     {this.state.photo.description}
                   </div>
                 )}
