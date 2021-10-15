@@ -1,0 +1,23 @@
+.back-button {
+  position: absolute;
+  width: 53px;
+  left: 2rem;
+  top: 1rem;
+}
+
+.label {
+  display: block;
+  width: auto;
+  line-height: 26px;
+  font-size: 12px;
+  font-weight: 900;
+  text-decoration: none;
+  background-color: rgba(239, 239, 239, 1);
+  border: 1px solid #bcbcbc;
+  color: #888;
+  text-shadow: 0 1px 0 rgb(255 255 255 / 80%);
+}
+
+.label:hover {
+  color: #333;
+}

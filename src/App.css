@@ -1,0 +1,24 @@
+html {
+  --margin-large: 64px;
+  --margin-medium: 24px;
+  --margin-small: 10px;
+  --padding-large: 24px;
+  --padding-medium: 16px;
+  --padding-small: 10px;
+}
+
+* {
+  box-sizing: border-box;
+  color: #333;
+}
+
+.App {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: 16px;
+}
+
+h5 {
+  margin-bottom: var(--margin-small);
+}

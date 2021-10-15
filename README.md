@@ -1,3 +1,20 @@
+# Unsplash Photo App
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Before running the application, install the dependencies by running the following command: 
+#### `npm install`
+
+Create a .env file and add your API key for the Unsplash api: 
+#### `REACT_APP_API_ACCESS_KEY = yourKey`
+
+## Available Scripts
+
+In the project directory, you can run:
+
+#### `npm start`
+
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser. The page will reload if you make edits.
+
 ## Goal:
 
 #### Build a simple React app that allows viewing and interacting with a grid of curated photos from Unsplash
