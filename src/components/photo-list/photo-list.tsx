@@ -11,7 +11,7 @@ interface State {
 interface Props {}
 
 class PhotoListComponent extends React.Component<Props, State> {
-  ACCESS_KEY: any = process.env.REACT_APP_API_ACCESS_KEY2;
+  ACCESS_KEY: any = process.env.REACT_APP_API_ACCESS_KEY;
   constructor(props: Props) {
     super(props);
     this.state = {

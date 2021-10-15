@@ -15,7 +15,7 @@ interface RouteParams {
 interface Props extends RouteComponentProps<RouteParams> {}
 
 class PhotoDetailComponent extends React.Component<Props, State> {
-  ACCESS_KEY: any = process.env.REACT_APP_API_ACCESS_KEY2;
+  ACCESS_KEY: any = process.env.REACT_APP_API_ACCESS_KEY;
 
   constructor(props: Props) {
     super(props);
