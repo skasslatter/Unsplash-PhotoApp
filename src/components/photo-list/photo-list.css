@@ -1,12 +1,12 @@
 .card-list {
   column-count: 5;
-  margin: 2rem;
+  margin: var(--margin-medium);
 }
 
 .card {
   display: inline-block;
-  margin-bottom: 1rem;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+  margin-bottom: var(--margin-medium);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
 }
 
@@ -22,7 +22,7 @@
 .card--footer {
   display: flex;
   align-items: center;
-  padding: 10px 15px;
+  padding: var(--padding-small) var(--padding-medium);
   border-radius: 10px;
 }
 
@@ -35,9 +35,8 @@
 
 .media--body {
   font-family: Courier, serif;
-  font-size: 15px;
   color: #999;
-  margin-left: 10px;
+  margin-left: var(--margin-small);
 }
 
 @media only screen and (max-width: 1200px) {

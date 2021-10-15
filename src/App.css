@@ -1,21 +1,14 @@
-/* .App {
-  text-align: center;
-} */
-
-/* .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-} */
+html {
+  --margin-large: 64px;
+  --margin-medium: 24px;
+  --margin-small: 10px;
+  --padding-large: 24px;
+  --padding-medium: 16px;
+  --padding-small: 10px;
+}
 
 * {
   box-sizing: border-box;
-  background-color: rgb(244, 244, 244);
   color: #333;
 }
 
@@ -23,8 +16,9 @@
   margin: 0;
   padding: 0;
   text-align: center;
+  font-size: 16px;
 }
 
 h5 {
-  margin-bottom: 10px;
+  margin-bottom: var(--margin-small);
 }

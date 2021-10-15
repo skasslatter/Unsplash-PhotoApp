@@ -2,7 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  margin: 4rem 2rem;
+  margin: var(--margin-large) var(--margin-medium);
 }
 
 .img--wrapper>img {
@@ -14,15 +14,8 @@
 .infos {
   display: flex;
   flex-direction: column;
-  align-self: center;
-  padding: 2rem;
-}
-
-.infos--description {
-  font-family: Courier serif;
-  font-size: 15px;
-  color: #999;
-  margin-left: 10px;
+  align-items: center;
+  padding: var(--padding-large);
 }
 
 .author {
@@ -41,7 +34,7 @@
 .author--name {
   display: flex;
   align-items: center;
-  padding: 10px 15px;
+  padding: var(--padding-small) var(--padding-medium);
   border-radius: 10px;
   justify-content: center;
 }
